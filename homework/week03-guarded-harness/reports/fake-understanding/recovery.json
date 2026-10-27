@@ -1,0 +1,13 @@
+[
+  {
+    "call_id": "report",
+    "before_steps": 5,
+    "after_steps": 6,
+    "before_tools": 5,
+    "after_tools": 6,
+    "status": "COMPLETED",
+    "completed_writes": [
+      "report"
+    ]
+  }
+]

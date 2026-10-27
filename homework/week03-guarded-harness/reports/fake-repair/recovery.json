@@ -1,0 +1,25 @@
+[
+  {
+    "call_id": "patch",
+    "before_steps": 5,
+    "after_steps": 8,
+    "before_tools": 5,
+    "after_tools": 8,
+    "status": "WAITING_APPROVAL",
+    "completed_writes": [
+      "patch"
+    ]
+  },
+  {
+    "call_id": "report",
+    "before_steps": 8,
+    "after_steps": 9,
+    "before_tools": 8,
+    "after_tools": 9,
+    "status": "COMPLETED",
+    "completed_writes": [
+      "patch",
+      "report"
+    ]
+  }
+]

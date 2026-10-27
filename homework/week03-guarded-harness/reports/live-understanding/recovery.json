@@ -1,0 +1,53 @@
+[
+  {
+    "actor": "harness",
+    "decision": "RESTORED",
+    "details": {
+      "revision": 35,
+      "steps": 7,
+      "tools": 6
+    },
+    "event": "recovery",
+    "previous_hash": "1c87b4a9f7e4cc3a603c3e56801244f4fd1cdf83ea7c3c9dcfc96adfd1e9a1a3",
+    "rule": "CHECKPOINT_LOADED",
+    "run_id": "d082e84b6e6f4d8d961d79ca9e4ff625",
+    "sequence": 62,
+    "timestamp": 1793007482.778997,
+    "toolCallId": null,
+    "hash": "bb49d7ba9c0d906d1a133666fc473f18a0b4dfd0c8e4ee2ecff8512a1589bccf"
+  },
+  {
+    "actor": "harness",
+    "decision": "RESTORED",
+    "details": {
+      "revision": 37,
+      "steps": 7,
+      "tools": 6
+    },
+    "event": "recovery",
+    "previous_hash": "aee16672a061eba2fdbf16b8b7e15eceecf2351750e3647cba0cc76f2418fa6b",
+    "rule": "CHECKPOINT_LOADED",
+    "run_id": "d082e84b6e6f4d8d961d79ca9e4ff625",
+    "sequence": 67,
+    "timestamp": 1793007491.517866,
+    "toolCallId": null,
+    "hash": "7dfdd9bdee49277c9eb9ed260f736b2cc5982d6ff7a8b35893a3f3c56bfd1c11"
+  },
+  {
+    "actor": "harness",
+    "decision": "RESTORED",
+    "details": {
+      "revision": 47,
+      "steps": 8,
+      "tools": 7
+    },
+    "event": "recovery",
+    "previous_hash": "9642e0d51a4e8cf274b05a025924540134a100bd4291e087541d0b27fea2bf54",
+    "rule": "CHECKPOINT_LOADED",
+    "run_id": "d082e84b6e6f4d8d961d79ca9e4ff625",
+    "sequence": 88,
+    "timestamp": 1793007555.8373382,
+    "toolCallId": null,
+    "hash": "4f39024c64a8defb4cb145d6be178c36dfb73e607a3ef0592351b9068907f29b"
+  }
+]

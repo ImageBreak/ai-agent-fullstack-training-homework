@@ -1,0 +1,10 @@
+{
+  "run_id": "111cb9da741e46089af3920e3f0c2bf3",
+  "model": "fake",
+  "status": "COMPLETED",
+  "stop_reason": "COMPLETED",
+  "steps": 6,
+  "tools": 6,
+  "tokens": 12,
+  "final_answer": "Report and current test evidence are ready."
+}

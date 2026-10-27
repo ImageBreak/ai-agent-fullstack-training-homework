@@ -1,0 +1,160 @@
+{
+  "source_sha256": "db4db3adae0fceecc09ae89528e710980be66836e5d5db7f7f1a1165613365d3",
+  "timestamp": 1793007806.437783,
+  "python": "3.12.14",
+  "smolagents": "1.26.0",
+  "checks": {
+    "G1": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_gate::test_g1_schema_rejected_before_handler[args0]",
+        "tests.test_gate::test_g1_schema_rejected_before_handler[args1]",
+        "tests.test_gate::test_g1_schema_rejected_before_handler[args2]"
+      ]
+    },
+    "G2": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_gate::test_g2_third_identical_call_is_blocked"
+      ]
+    },
+    "G3": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_gate::test_g3_unapproved_write_pauses_and_changes_nothing"
+      ]
+    },
+    "G4": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_gate::test_g4_approval_is_consumed_once_and_replay_rejected"
+      ]
+    },
+    "S1": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_sandbox::test_s1_path_escape_never_enters_handler[artifacts/../../.env]",
+        "tests.test_sandbox::test_s1_path_escape_never_enters_handler[/etc/passwd]",
+        "tests.test_sandbox::test_s1_path_escape_never_enters_handler[src/../../outside]"
+      ]
+    },
+    "S2": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_sandbox::test_s2_symlinks_and_sensitive_targets_are_rejected_and_audited"
+      ]
+    },
+    "S3": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_sandbox::test_s3_command_outside_configuration_never_executes"
+      ]
+    },
+    "S4": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_sandbox::test_s4_timeout_and_cancel_terminate_process_group[False]",
+        "tests.test_sandbox::test_s4_timeout_and_cancel_terminate_process_group[True]"
+      ]
+    },
+    "C1": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_state_checkpoint::test_c1_safe_checkpoint_contains_full_business_state"
+      ]
+    },
+    "C2": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_state_checkpoint::test_c2_crash_after_write_before_result_is_unknown_and_not_replayed"
+      ]
+    },
+    "C3": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_state_checkpoint::test_c3_new_process_resume_keeps_progress_and_does_not_rewrite"
+      ]
+    },
+    "C4": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_state_checkpoint::test_c4_workspace_change_invalidates_evidence_and_old_approval[src/ranges.py]",
+        "tests.test_state_checkpoint::test_c4_workspace_change_invalidates_evidence_and_old_approval[artifacts/extra.md]"
+      ]
+    },
+    "A1": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_audit::test_a1_denial_contains_rule_decision_actor_and_tool_call_id"
+      ]
+    },
+    "A2": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_audit::test_a2_full_chain_correlates_gate_sandbox_state_approval_and_results"
+      ]
+    },
+    "H1": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_completion::test_h1_final_answer_without_deliverables_is_rejected"
+      ]
+    },
+    "H2": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_completion::test_h2_modifying_source_invalidates_previous_passing_test_evidence"
+      ]
+    },
+    "H3": {
+      "status": "PASS",
+      "tests": [
+        "tests.test_completion::test_h3_limits_stop_with_explicit_reason_not_success[policy0-STEP_LIMIT]",
+        "tests.test_completion::test_h3_limits_stop_with_explicit_reason_not_success[policy1-TOKEN_LIMIT]",
+        "tests.test_completion::test_h3_limits_stop_with_explicit_reason_not_success[policy2-TOOL_LIMIT]"
+      ]
+    },
+    "T1": {
+      "status": "PASS",
+      "test_count": 44
+    },
+    "T2": {
+      "status": "PASS",
+      "runs": {
+        "understanding": {
+          "run_id": "d082e84b6e6f4d8d961d79ca9e4ff625",
+          "model": "live",
+          "status": "COMPLETED",
+          "stop_reason": "COMPLETED",
+          "steps": 8,
+          "tools": 7,
+          "tokens": 25786,
+          "final_answer": "`clamp(value, lower, upper)` (src/ranges.py:1) returns `value` constrained to the inclusive interval `[lower, upper]` (src/ranges.py:2), implemented as `max(lower, min(value, upper))` (src/ranges.py:5).\n\nBehavior:\n- Values below `lower` → `lower`; values above `upper` → `upper`; values inside pass through unchanged (src/ranges.py:5).\n- Both bounds are inclusive, so `value == lower` and `value == upper` are returned unchanged (src/ranges.py:2,5).\n- Pure function: no mutation, I/O, or global state (src/ranges.py:1-5).\n\nBoundary cases:\n- `value < lower` → `lower`; `value == lower` → `lower`; `lower < value < upper` → `value`; `value == upper` → `upper`; `value > upper` → `upper` (src/ranges.py:5).\n- `lower == upper` is valid (the check at src/ranges.py:3 is strict `>`), yielding a constant function.\n\nError handling:\n- `lower > upper` raises `ValueError(\"lower must not exceed upper\")` before any clamping (src/ranges.py:3-4) — the only explicit error path.\n- No type validation: non-comparable/`None` inputs surface as native `TypeError` from `>`/`min`/`max` (src/ranges.py:3,5).\n\nTests (tests/test_ranges.py): below-lower (4-5), inside (8-9), above-upper (12-13), invalid interval (16-22). Gaps: no exact-boundary or degenerate-interval tests; invalid-interval test doesn't use `pytest.raises` or assert the message.\n\nTest run: configured `unit` suite passed — exit code 0, 4 passed in 0.00s. No sources modified; report written to artifacts/understanding.md."
+        },
+        "repair": {
+          "run_id": "9d3c36c9496f41beb932de9a5c48d808",
+          "model": "live",
+          "status": "COMPLETED",
+          "stop_reason": "COMPLETED",
+          "steps": 11,
+          "tools": 10,
+          "tokens": 38387,
+          "final_answer": "Repaired the off-by-one in `clamp` (src/ranges.py:5): `min(value, upper - 1)` → `min(value, upper)`, making the upper bound inclusive as documented at src/ranges.py:2.\n\nBefore: `1 failed, 3 passed` — `test_inclusive_upper_boundary` failed with `assert 9 == 10` (tests/test_ranges.py:13).\nAfter: `4 passed in 0.00s`.\n\nTests were preserved; only src/ranges.py was edited. Report written to artifacts/repair.md with source citations."
+        }
+      }
+    }
+  },
+  "fake_demonstrations": {
+    "understanding": {
+      "status": "COMPLETED",
+      "run_id": "111cb9da741e46089af3920e3f0c2bf3",
+      "directory": "reports/fake-understanding"
+    },
+    "repair": {
+      "status": "COMPLETED",
+      "run_id": "990c1e225f0c429c96d759a71bc3a6cb",
+      "directory": "reports/fake-repair"
+    }
+  },
+  "acceptance_complete": true
+}

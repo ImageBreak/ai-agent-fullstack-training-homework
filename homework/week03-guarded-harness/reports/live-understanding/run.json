@@ -1,0 +1,10 @@
+{
+  "run_id": "d082e84b6e6f4d8d961d79ca9e4ff625",
+  "model": "live",
+  "status": "COMPLETED",
+  "stop_reason": "COMPLETED",
+  "steps": 8,
+  "tools": 7,
+  "tokens": 25786,
+  "final_answer": "`clamp(value, lower, upper)` (src/ranges.py:1) returns `value` constrained to the inclusive interval `[lower, upper]` (src/ranges.py:2), implemented as `max(lower, min(value, upper))` (src/ranges.py:5).\n\nBehavior:\n- Values below `lower` → `lower`; values above `upper` → `upper`; values inside pass through unchanged (src/ranges.py:5).\n- Both bounds are inclusive, so `value == lower` and `value == upper` are returned unchanged (src/ranges.py:2,5).\n- Pure function: no mutation, I/O, or global state (src/ranges.py:1-5).\n\nBoundary cases:\n- `value < lower` → `lower`; `value == lower` → `lower`; `lower < value < upper` → `value`; `value == upper` → `upper`; `value > upper` → `upper` (src/ranges.py:5).\n- `lower == upper` is valid (the check at src/ranges.py:3 is strict `>`), yielding a constant function.\n\nError handling:\n- `lower > upper` raises `ValueError(\"lower must not exceed upper\")` before any clamping (src/ranges.py:3-4) — the only explicit error path.\n- No type validation: non-comparable/`None` inputs surface as native `TypeError` from `>`/`min`/`max` (src/ranges.py:3,5).\n\nTests (tests/test_ranges.py): below-lower (4-5), inside (8-9), above-upper (12-13), invalid interval (16-22). Gaps: no exact-boundary or degenerate-interval tests; invalid-interval test doesn't use `pytest.raises` or assert the message.\n\nTest run: configured `unit` suite passed — exit code 0, 4 passed in 0.00s. No sources modified; report written to artifacts/understanding.md."
+}

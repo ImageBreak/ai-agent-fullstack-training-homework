@@ -1,0 +1,8 @@
+--- a/src/ranges.py
++++ b/src/ranges.py
+@@ -2,4 +2,4 @@
+     """Return value constrained to the inclusive interval [lower, upper]."""
+     if lower > upper:
+         raise ValueError("lower must not exceed upper")
+-    return max(lower, min(value, upper - 1))
++    return max(lower, min(value, upper))
