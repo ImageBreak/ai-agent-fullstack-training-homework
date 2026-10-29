@@ -1,0 +1,790 @@
+{
+  "version": "6e1e6b06245281d9",
+  "model": "BAAI/bge-small-zh-v1.5",
+  "dimension": 512,
+  "files": {
+    "faq.md": "05e6ac57128599f368789c9e0753ce164da08546a3913e6e942198207e26ced7",
+    "payment-session.md": "abfa08e54c3129ceab433f071f50eb7879a1ea9060b6dea6787b1462b760bab9",
+    "session-matrix.csv": "72b5928e16226c7db389a71253fd6aee790bda2b2c2fcd9f6227ddc7633b31b4",
+    "session-rules.md": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+    "testing-guide.md": "99936e0b0bcc24a844a5dc27a2d8acb7150107bad56c9ce5e8d252468481429c"
+  },
+  "node_ids": [
+    "fb2ca596c50bbcc182b39d4db8f8d45802e64ac523594f809782b90c9f954fb0",
+    "745eee46db95f321aa5b4283ca29669b82b0194451c49fcc2d17243a17e97bf6",
+    "179e2d1c0dc055d22103ba6d18d585ec31e1992ee7ae5041321c1843d807731c",
+    "7a32feed4427822910a186bae3d5db8eb3b40e2beb271181334ceefda4c47ed9",
+    "032591745b38a543b517c807c906753b99bd05c7d3ca8ffd5193b573894b5adc",
+    "431a16825d312e1fa19e1fb1a07e8a53bc7df48077920d57241c387aa4926ea4",
+    "c25be92f8efad566a76593481b738d060ef5a899306ad379704c726eec301bef",
+    "e7f69e4f2a0c2546a440817a1e76a4f6e4558a5c2af8517257a93832de763891",
+    "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec",
+    "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02",
+    "7bcaa4cee5182caf83e66e908f201f2b66c8c5dab384e8edfa1ddd6aeaec123b",
+    "5acee52eb7461a40fbdcb397e883851346682edfaf1a6a27b6b26e81287ff527",
+    "6f3450e342293ff9d34987b17ab36e0a3afe026203dd801fb500317254aa3abe",
+    "4575bbcdfa2cdfba5ce7afeb0d57965e4a098f18fd54cde2b2d7cb43265b30d4",
+    "36df394bd3a52fcdd9d24faf3729012875619004c504d9311ca62fa4d2c630c7",
+    "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3",
+    "d195265d374acacdf26810410230418bf5a6fc60fcc8e38fd4f725ca8f1c5247",
+    "e7c9a1c3fec34aa1cfe0d4fb057907ebaec1d1b947c8dca3cd1ca89cf448ef73",
+    "f1ba9e254487a628fb67ab7728ce826999557f155e2f3289834a926f6f8a104d",
+    "21ab01311f7ee915cd938b1b55bf6463f632d3fd8b07bb48adb58600acd0cc5f",
+    "c48d30cd06c389d36fc01d15dce895358139f634b25451d7cee10c68cc6be6df",
+    "21958c96a7860ab4ebe3dcf530bb2302cf9259f607e7a70e41ae5e7f7278cc0e"
+  ],
+  "nodes": [
+    {
+      "id_": "fb2ca596c50bbcc182b39d4db8f8d45802e64ac523594f809782b90c9f954fb0",
+      "embedding": null,
+      "metadata": {
+        "source": "faq.md",
+        "title": "faq",
+        "source_sha256": "05e6ac57128599f368789c9e0753ce164da08546a3913e6e942198207e26ced7",
+        "content_sha256": "ef24a2d1f4a30c5054d9c68b6d7538a9d8bd9ba32c5d3be0c8c9835541ab7f08",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "---\nservice: login_demo\ntopic: troubleshooting\nowner: 认证组\nupdated: 2026-09-25\n---",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "745eee46db95f321aa5b4283ca29669b82b0194451c49fcc2d17243a17e97bf6",
+      "embedding": null,
+      "metadata": {
+        "source": "faq.md",
+        "title": "用户反馈\"登录状态老是掉\"",
+        "source_sha256": "05e6ac57128599f368789c9e0753ce164da08546a3913e6e942198207e26ced7",
+        "content_sha256": "15acde013b75d03060968c169f98117d100eeaa18bd0fae67344b95784854ebd",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "1. 先确认会话有效期配置是否被改过，默认 20 分钟。\n2. 再看是不是恰好卡在到期时刻被判定为无效，检查边界用例。\n3. 最后确认前端是否在响应里正确保存了新的令牌。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "179e2d1c0dc055d22103ba6d18d585ec31e1992ee7ae5041321c1843d807731c",
+      "embedding": null,
+      "metadata": {
+        "source": "faq.md",
+        "title": "能否把有效期改长一点",
+        "source_sha256": "05e6ac57128599f368789c9e0753ce164da08546a3913e6e942198207e26ced7",
+        "content_sha256": "41624944df9278fe4ce938c34157ea95757ad36560cf5c01e7bde4cadc50d07d",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 可以，但需要产品确认。修改前先读 `docs/session-rules.md`，不要直接改代码常量。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "7a32feed4427822910a186bae3d5db8eb3b40e2beb271181334ceefda4c47ed9",
+      "embedding": null,
+      "metadata": {
+        "source": "faq.md",
+        "title": "忘记测试命令怎么办",
+        "source_sha256": "05e6ac57128599f368789c9e0753ce164da08546a3913e6e942198207e26ced7",
+        "content_sha256": "49aa06522fdc278e96e2292148358e7b7104c257699a1daa46231e174df6c346",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 见 `docs/testing-guide.md`，入口是 `python -m pytest tests/test_session.py -q`。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "032591745b38a543b517c807c906753b99bd05c7d3ca8ffd5193b573894b5adc",
+      "embedding": null,
+      "metadata": {
+        "source": "payment-session.md",
+        "title": "payment-session",
+        "source_sha256": "abfa08e54c3129ceab433f071f50eb7879a1ea9060b6dea6787b1462b760bab9",
+        "content_sha256": "5d66c1916909af009db5c9238dc88721b6bcfe309fac6893c0d9ab02127de0d5",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "---\nservice: pay_gateway\ntopic: session-expiry\nowner: 支付组\nupdated: 2026-08-15\n---",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "431a16825d312e1fa19e1fb1a07e8a53bc7df48077920d57241c387aa4926ea4",
+      "embedding": null,
+      "metadata": {
+        "source": "payment-session.md",
+        "title": "支付会话规则",
+        "source_sha256": "abfa08e54c3129ceab433f071f50eb7879a1ea9060b6dea6787b1462b760bab9",
+        "content_sha256": "b0dba7dc276940fe08be95f071aef886ba4f020c091cf5c85eefa47dabae3fa7",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "适用服务：pay_gateway 收单网关。本文与登录服务无关。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "c25be92f8efad566a76593481b738d060ef5a899306ad379704c726eec301bef",
+      "embedding": null,
+      "metadata": {
+        "source": "payment-session.md",
+        "title": "有效期长度",
+        "source_sha256": "abfa08e54c3129ceab433f071f50eb7879a1ea9060b6dea6787b1462b760bab9",
+        "content_sha256": "e4d1a8e54e970739a32ecb19c2b5b5a47ef41a21148eb73673118c8111cc4121",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 支付会话有效期为 5 分钟。\n- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "e7f69e4f2a0c2546a440817a1e76a4f6e4558a5c2af8517257a93832de763891",
+      "embedding": null,
+      "metadata": {
+        "source": "payment-session.md",
+        "title": "到期边界",
+        "source_sha256": "abfa08e54c3129ceab433f071f50eb7879a1ea9060b6dea6787b1462b760bab9",
+        "content_sha256": "170db6cd9d7b3092c737e75514ae999719cb6221e71c01ba0cd8c8afc1a08a20",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 支付会话在 `now >= expires_at` 时置为超时。\n- 与登录会话不同，支付会话到期后不刷新，只能重建。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec",
+      "embedding": null,
+      "metadata": {
+        "source": "payment-session.md",
+        "title": "与登录会话的区别",
+        "source_sha256": "abfa08e54c3129ceab433f071f50eb7879a1ea9060b6dea6787b1462b760bab9",
+        "content_sha256": "9032c8be4ff5e1cc512298b7438878645e18d822d699ae0288ea1b1471c4336f",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 登录会话 20 分钟、可续期；支付会话 5 分钟、不可续期。\n- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02",
+      "embedding": null,
+      "metadata": {
+        "source": "session-matrix.csv",
+        "title": "登录会话",
+        "source_sha256": "72b5928e16226c7db389a71253fd6aee790bda2b2c2fcd9f6227ddc7633b31b4",
+        "content_sha256": "0795b1301b3a0d26081c0e4b8fabc6ab32534fabf6ba430428af9ac6e52eae4d",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "服务：login_demo，会话类型：登录会话，有效期：20 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "7bcaa4cee5182caf83e66e908f201f2b66c8c5dab384e8edfa1ddd6aeaec123b",
+      "embedding": null,
+      "metadata": {
+        "source": "session-matrix.csv",
+        "title": "支付会话",
+        "source_sha256": "72b5928e16226c7db389a71253fd6aee790bda2b2c2fcd9f6227ddc7633b31b4",
+        "content_sha256": "97e97b4ca3217280e994a21d60bd75597083aa2e56ac6de678ce60ace4802d34",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "服务：pay_gateway，会话类型：支付会话，有效期：5 分钟，可续期：否，到期边界处理：到期即置为超时，负责人：支付组",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "5acee52eb7461a40fbdcb397e883851346682edfaf1a6a27b6b26e81287ff527",
+      "embedding": null,
+      "metadata": {
+        "source": "session-matrix.csv",
+        "title": "匿名浏览会话",
+        "source_sha256": "72b5928e16226c7db389a71253fd6aee790bda2b2c2fcd9f6227ddc7633b31b4",
+        "content_sha256": "2abb54493d303c09ca26a541c5ad3d494438ca42bd7caf374c772606b3a553e2",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "服务：login_demo，会话类型：匿名浏览会话，有效期：120 分钟，可续期：是，到期边界处理：到期后重新签发，负责人：认证组",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "6f3450e342293ff9d34987b17ab36e0a3afe026203dd801fb500317254aa3abe",
+      "embedding": null,
+      "metadata": {
+        "source": "session-matrix.csv",
+        "title": "记住我令牌",
+        "source_sha256": "72b5928e16226c7db389a71253fd6aee790bda2b2c2fcd9f6227ddc7633b31b4",
+        "content_sha256": "1e4baefba390b27fea16fae3f88b16d7a6c4ee98b3e3bcf7c95eb0a96fb64aa1",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "4575bbcdfa2cdfba5ce7afeb0d57965e4a098f18fd54cde2b2d7cb43265b30d4",
+      "embedding": null,
+      "metadata": {
+        "source": "session-rules.md",
+        "title": "session-rules",
+        "source_sha256": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+        "content_sha256": "e6f9085453b19891f1d5ee0a4070899ce2e511003bf3956d57cd1b9300360bc7",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "---\nservice: login_demo\ntopic: session-expiry\nowner: 认证组\nupdated: 2026-10-01\n---",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "36df394bd3a52fcdd9d24faf3729012875619004c504d9311ca62fa4d2c630c7",
+      "embedding": null,
+      "metadata": {
+        "source": "session-rules.md",
+        "title": "登录会话有效期规则",
+        "source_sha256": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+        "content_sha256": "430fb92439c9b7611d886863bd8fc9ca73ed25ffdc43f0d3ab14419949c0e3f1",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "适用服务：login_demo 登录服务。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3",
+      "embedding": null,
+      "metadata": {
+        "source": "session-rules.md",
+        "title": "有效期长度",
+        "source_sha256": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+        "content_sha256": "d22aa6d0fa52c66821c8ea92146c1369c5f87d2e2fe2636512c8dfedd3bddfbc",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 管理后台的登录会话有效期为 20 分钟。\n- 计时方式：从签发时刻开始计算，20 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "d195265d374acacdf26810410230418bf5a6fc60fcc8e38fd4f725ca8f1c5247",
+      "embedding": null,
+      "metadata": {
+        "source": "session-rules.md",
+        "title": "到期边界",
+        "source_sha256": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+        "content_sha256": "a855675004b075a717959e163d3317330f8df439d86188b9c3229bcea27b6b14",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 项目约定：当前时刻恰好等于到期时刻时，会话必须判定为无效。\n- 也就是说，`now == expires_at` 属于已过期。\n- 实现上有效条件写作 `now < expires_at`，不要写成 `now <= expires_at`。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "e7c9a1c3fec34aa1cfe0d4fb057907ebaec1d1b947c8dca3cd1ca89cf448ef73",
+      "embedding": null,
+      "metadata": {
+        "source": "session-rules.md",
+        "title": "续期",
+        "source_sha256": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+        "content_sha256": "abf81220a44000e0bf868527162432c0e01a651b280ef1bef4bdcfaffd5cf949",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 用户发起请求后，服务在响应返回前刷新 `expires_at`。\n- 新的到期时间 = 请求到达时刻 + 20 分钟。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "f1ba9e254487a628fb67ab7728ce826999557f155e2f3289834a926f6f8a104d",
+      "embedding": null,
+      "metadata": {
+        "source": "session-rules.md",
+        "title": "不适用范围",
+        "source_sha256": "b7870a70d167516fa18d9e7083465d63b94c5bd10a5b0bd18134b94ae5a32051",
+        "content_sha256": "833ceda4f6dbadff0c6404ef8c4f74cdcc0ce26ed9d2a2892d74e1d17ffbbaf3",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 本节规则只约束登录会话，不适用于支付会话、匿名浏览会话。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "21ab01311f7ee915cd938b1b55bf6463f632d3fd8b07bb48adb58600acd0cc5f",
+      "embedding": null,
+      "metadata": {
+        "source": "testing-guide.md",
+        "title": "login_demo 会话测试说明",
+        "source_sha256": "99936e0b0bcc24a844a5dc27a2d8acb7150107bad56c9ce5e8d252468481429c",
+        "content_sha256": "7ebd6ea8ed1470d9c0af2690127a70957cf0e5878c3c6bf9193c4d5bc9613dc5",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "课程资料适配：此项目只包含课程 Python 会话时间判断和续期模块。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "c48d30cd06c389d36fc01d15dce895358139f634b25451d7cee10c68cc6be6df",
+      "embedding": null,
+      "metadata": {
+        "source": "testing-guide.md",
+        "title": "测试入口",
+        "source_sha256": "99936e0b0bcc24a844a5dc27a2d8acb7150107bad56c9ce5e8d252468481429c",
+        "content_sha256": "dd2df52e8a8006f613fe114c62e55b2e499b09137dfde7e9cb90377a3a0a11b6",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 测试文件：`tests/auth/test_session.py`\n- 运行命令：`python -m pytest tests/auth/test_session.py -q`",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    },
+    {
+      "id_": "21958c96a7860ab4ebe3dcf530bb2302cf9259f607e7a70e41ae5e7f7278cc0e",
+      "embedding": null,
+      "metadata": {
+        "source": "testing-guide.md",
+        "title": "覆盖范围",
+        "source_sha256": "99936e0b0bcc24a844a5dc27a2d8acb7150107bad56c9ce5e8d252468481429c",
+        "content_sha256": "ad0f9e0c415e08a168540e0c1c3417fb6dcf323b52207a57e16eed55e96c4a55",
+        "version": "ed19a6eab97f53fb"
+      },
+      "excluded_embed_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "excluded_llm_metadata_keys": [
+        "source",
+        "title",
+        "source_sha256",
+        "content_sha256",
+        "version"
+      ],
+      "relationships": {},
+      "metadata_template": "{key}: {value}",
+      "metadata_separator": "\n",
+      "text": "- 到期前会话有效，恰好到期和到期后会话无效。\n- 续期会从当前时间向后延长 20 分钟。",
+      "mimetype": "text/plain",
+      "start_char_idx": null,
+      "end_char_idx": null,
+      "text_template": "{metadata_str}\n\n{content}",
+      "class_name": "TextNode"
+    }
+  ],
+  "bm25": {
+    "token_pattern": "(?u)\\b\\w+\\b",
+    "skip_stemming": true
+  }
+}

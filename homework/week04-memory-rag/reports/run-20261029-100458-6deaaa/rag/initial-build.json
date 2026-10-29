@@ -1,0 +1,15 @@
+{
+  "version": "4ad021ebdec3e7a2",
+  "node_count": 22,
+  "dimension": 512,
+  "model": "BAAI/bge-small-zh-v1.5",
+  "sample": {
+    "id": "34b73565fbfc17272ccf0fa083da6361d238f44c05de0d237b77a7d3871a0bf9",
+    "source": "session-rules.md",
+    "title": "有效期长度",
+    "version": "683b10442be31071",
+    "text": "- 管理后台的登录会话有效期为 30 分钟。\n- 计时方式：从签发时刻开始计算，30 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。",
+    "score": null
+  },
+  "index_path": "/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/rag/index/generations/4ad021ebdec3e7a2"
+}

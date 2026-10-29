@@ -1,0 +1,19 @@
+{
+  "session": {
+    "type": "session",
+    "version": 3,
+    "id": "01a18567-3da5-762a-85a0-3f91c3d97672",
+    "timestamp": "2026-10-29T02:04:58.150Z",
+    "cwd": "/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/login_demo"
+  },
+  "answer": "已保存。\n\n- **记录 ID**：`863ae7b6-40aa-43d6-b677-2a0a4dcdd457`，key = `session-test`，revision = 1\n- **实际数据库路径**：`/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/memory/memory.sqlite3`\n  （按 project 根 `.../reports/run-20261029-100458-6deaaa/login_demo` 的上层 `memory/` 目录存放，非当前工作目录内）\n- **来源 sources**（相对 project 根的已验证文件，附 sha256 快照）：\n  - `tests/test_session.py` → `07712250…e7ba47`\n  - `materials/testing-guide.md` → `5deb7ee1…262bd3`\n\n内容要点：会话测试文件 `tests/test_session.py`，运行命令 `python -m pytest tests/test_session.py -q`，覆盖到期前/到期/到期后有效性判定与 `refresh_expiry` 延长 30 分钟。",
+  "tools": [
+    "bash",
+    "bash",
+    "bash",
+    "read",
+    "read",
+    "memory_write"
+  ],
+  "event_log": "/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/memory/write.events.jsonl"
+}

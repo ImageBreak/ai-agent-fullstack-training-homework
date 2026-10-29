@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
+    *{box-sizing:border-box} body{margin:0;background:#edf1f5;color:#172332;font:18px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;line-height:1.55}
+    main{width:1380px;margin:0 auto;padding:40px} header{background:#12314b;color:white;padding:30px;border-radius:18px;margin-bottom:24px}
+    h1{font-size:32px;margin:0 0 6px} header p{margin:0;color:#c4d8e6} section{background:white;border:1px solid #d7e1e8;border-radius:14px;padding:22px 26px;margin-bottom:16px}
+    h2{font-size:21px;margin:0 0 12px;color:#13577b} pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;font:16px/1.5 ui-monospace,Menlo,monospace}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px} .rank{background:#f5f8fa;padding:12px;margin:8px 0;border-radius:8px} small{color:#496b7c}
+    </style></head><body><main><header><h1>第二题 · 三路检索与引用回答</h1><p>同一问题、各路前 5 条；真实模型使用混合检索证据</p></header><section><h2>检索结果对比</h2><div><div class="grid"><div><h3>向量检索</h3><div class="rank"><b>#1 session-rules.md · 有效期长度</b><br><small>节点 34b73565fbfc1727 | 得分 0.74204</small><br>- 管理后台的登录会话有效期为 30 分钟。
+- 计时方式：从签发时刻开始计算，30 分钟后到期。
+- 空闲会话不自动续期，必须由用户请求触发刷新。</div><div class="rank"><b>#2 testing-guide.md · 覆盖范围</b><br><small>节点 89b6d145d5cb5f24 | 得分 0.64887</small><br>- 到期前会话有效，恰好到期和到期后会话无效。
+- 续期会从当前时间向后延长 30 分钟。</div><div class="rank"><b>#3 payment-session.md · 有效期长度</b><br><small>节点 c25be92f8efad566 | 得分 0.64240</small><br>- 支付会话有效期为 5 分钟。
+- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。</div><div class="rank"><b>#4 session-matrix.csv · 登录会话</b><br><small>节点 0e082a949b679888 | 得分 0.63648</small><br>服务：login_demo，会话类型：登录会话，有效期：30 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组</div><div class="rank"><b>#5 payment-session.md · 与登录会话的区别</b><br><small>节点 08e241540097760b | 得分 0.62928</small><br>- 登录会话 30 分钟、可续期；支付会话 5 分钟、不可续期。
+- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。</div></div><div><h3>BM25 关键词</h3><div class="rank"><b>#1 payment-session.md · 与登录会话的区别</b><br><small>节点 08e241540097760b | 得分 2.19740</small><br>- 登录会话 30 分钟、可续期；支付会话 5 分钟、不可续期。
+- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。</div><div class="rank"><b>#2 session-matrix.csv · 登录会话</b><br><small>节点 0e082a949b679888 | 得分 1.97829</small><br>服务：login_demo，会话类型：登录会话，有效期：30 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组</div><div class="rank"><b>#3 session-rules.md · 有效期长度</b><br><small>节点 34b73565fbfc1727 | 得分 1.95338</small><br>- 管理后台的登录会话有效期为 30 分钟。
+- 计时方式：从签发时刻开始计算，30 分钟后到期。
+- 空闲会话不自动续期，必须由用户请求触发刷新。</div><div class="rank"><b>#4 session-matrix.csv · 匿名浏览会话</b><br><small>节点 5acee52eb7461a40 | 得分 1.57779</small><br>服务：login_demo，会话类型：匿名浏览会话，有效期：120 分钟，可续期：是，到期边界处理：到期后重新签发，负责人：认证组</div><div class="rank"><b>#5 session-matrix.csv · 记住我令牌</b><br><small>节点 6f3450e342293ff9 | 得分 1.51482</small><br>服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组</div></div><div><h3>RRF 混合检索</h3><div class="rank"><b>#1 session-rules.md · 有效期长度</b><br><small>节点 34b73565fbfc1727 | 得分 0.03227</small><br>- 管理后台的登录会话有效期为 30 分钟。
+- 计时方式：从签发时刻开始计算，30 分钟后到期。
+- 空闲会话不自动续期，必须由用户请求触发刷新。</div><div class="rank"><b>#2 payment-session.md · 与登录会话的区别</b><br><small>节点 08e241540097760b | 得分 0.03178</small><br>- 登录会话 30 分钟、可续期；支付会话 5 分钟、不可续期。
+- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。</div><div class="rank"><b>#3 session-matrix.csv · 登录会话</b><br><small>节点 0e082a949b679888 | 得分 0.03175</small><br>服务：login_demo，会话类型：登录会话，有效期：30 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组</div><div class="rank"><b>#4 payment-session.md · 有效期长度</b><br><small>节点 c25be92f8efad566 | 得分 0.03080</small><br>- 支付会话有效期为 5 分钟。
+- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。</div><div class="rank"><b>#5 session-matrix.csv · 记住我令牌</b><br><small>节点 6f3450e342293ff9 | 得分 0.03054</small><br>服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组</div></div></div></div></section><section><h2>真实模型回答与引用</h2><div><pre>登录会话的有效期是 **30 分钟** [E1][E2][E3]。
+
+补充说明：
+- 计时从签发时刻开始，30 分钟后到期 [E1]。
+- 空闲会话不自动续期，必须由用户请求触发刷新 [E1]；登录会话可续期 [E2][E3]。
+- 恰好到期视为无效 [E3]。
+
+注意区分：支付会话有效期为 5 分钟、不可续期 [E2][E4]；记住我令牌有效期为 30 天 [E5]。</pre><h3>证据原文与来源</h3><pre>[E1] session-rules.md · 有效期长度
+- 管理后台的登录会话有效期为 30 分钟。
+- 计时方式：从签发时刻开始计算，30 分钟后到期。
+- 空闲会话不自动续期，必须由用户请求触发刷新。
+
+[E2] payment-session.md · 与登录会话的区别
+- 登录会话 30 分钟、可续期；支付会话 5 分钟、不可续期。
+- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。
+
+[E3] session-matrix.csv · 登录会话
+服务：login_demo，会话类型：登录会话，有效期：30 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组
+
+[E4] payment-session.md · 有效期长度
+- 支付会话有效期为 5 分钟。
+- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。
+
+[E5] session-matrix.csv · 记住我令牌
+服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组</pre><p><small>模型：deepseek-flash · 引用编号有效：True</small></p></div></section></main></body></html>

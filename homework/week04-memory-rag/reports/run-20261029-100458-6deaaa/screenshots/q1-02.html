@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
+    *{box-sizing:border-box} body{margin:0;background:#edf1f5;color:#172332;font:18px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;line-height:1.55}
+    main{width:1380px;margin:0 auto;padding:40px} header{background:#12314b;color:white;padding:30px;border-radius:18px;margin-bottom:24px}
+    h1{font-size:32px;margin:0 0 6px} header p{margin:0;color:#c4d8e6} section{background:white;border:1px solid #d7e1e8;border-radius:14px;padding:22px 26px;margin-bottom:16px}
+    h2{font-size:21px;margin:0 0 12px;color:#13577b} pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;font:16px/1.5 ui-monospace,Menlo,monospace}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px} .rank{background:#f5f8fa;padding:12px;margin:8px 0;border-radius:8px} small{color:#496b7c}
+    </style></head><body><main><header><h1>第一题 · 新会话查询与核对</h1><p>独立会话读取同一持久化记忆，并核对项目文件</p></header><section><h2>会话 ID 对比</h2><div><pre>{
+  &quot;写入&quot;: &quot;01a18567-3da5-762a-85a0-3f91c3d97672&quot;,
+  &quot;查询&quot;: &quot;01a18567-600e-743f-b179-5e820cd1029c&quot;
+}</pre></div></section><section><h2>查询结果及回答</h2><div><pre>会话 ID：01a18567-600e-743f-b179-5e820cd1029c
+工具调用：memory_search → bash → memory_read → bash → read → read
+日志：/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/memory/read.events.jsonl</pre><h3>pi 的实际回答</h3><pre>检索和核对都已完成。
+
+## 记忆记录
+- ID：`863ae7b6-40aa-43d6-b677-2a0a4dcdd457`（key：`session-test`，revision 1）
+- 内容：测试文件为 `tests/test_session.py`，运行命令为 `python -m pytest tests/test_session.py -q`（在 login_demo 目录下执行）；覆盖范围包括：到期前的会话有效、恰好到期和到期后的会话无效（`is_session_valid`），以及续期 `refresh_expiry` 从当前时间向后延长 30 分钟（100 → 100+30*60）。
+
+## 与当前文件对比
+| 项目 | 记忆 | 当前文件 | 是否一致 |
+|---|---|---|---|
+| 测试文件是否存在 | `tests/test_session.py` | 存在（339 字节） | ✅ |
+| 文件内容哈希 | `0771225…7ba47` | `077122505f33bd14a79b5a1528bdb58dad350a9e4dfe7423a579473427e7ba47` | ✅ 完全一致 |
+| 测试说明哈希 | `5deb7ee…62bd3` | `5deb7ee1cff759eeaa33d9fd587b0ca6534d770a6d2280645e481b1d7a262bd3` | ✅ 完全一致 |
+| 运行命令 | `python -m pytest tests/test_session.py -q` | 说明文档中的“运行命令”一项相同 | ✅ |
+| 覆盖范围 | 3 类会话有效性 + 续期 30 分钟 | 4 个测试函数：`test_before_expiry` / `test_at_expiry` / `test_after_expiry` / `test_refresh_extends_ttl`（断言 `refresh_expiry(100) == 100 + 30*60`） | ✅ |
+
+结论：记忆与当前文件**完全一致**，没有过期或漂移，无需更新记忆。
+
+## 来源
+记忆记录中的 `sources` 字段列出的路径，即记忆内容的来源：
+1. `tests/test_session.py` — sha256 `077122505f33bd14a79b5a1528bdb58dad350a9e4dfe7423a579473427e7ba47`（已用 shasum 实际计算复核，匹配）
+2. `materials/testing-guide.md` — sha256 `5deb7ee1cff759eeaa33d9fd587b0ca6534d770a6d2280645e481b1d7a262bd3`（已用 shasum 实际计算复核，匹配）
+
+记忆数据库路径：`reports/run-20261029-100458-6deaaa/memory/memory.sqlite3`（当前工作目录是 `.../login_demo`，实际存储位置在上两级的 run 目录中）。
+
+**运行命令（验证自 `materials/testing-guide.md` 的“测试入口”一节）**：在 `login_demo` 目录下执行 `python -m pytest tests/test_session.py -q`。</pre></div></section><section><h2>记忆与文件（查询时路径存在）</h2><div><pre>记录 ID：863ae7b6-40aa-43d6-b677-2a0a4dcdd457    版本：1
+项目：/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/login_demo
+数据库：/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/memory/memory.sqlite3</pre><h3>记忆内容</h3><pre>会话测试（login_demo 项目）：测试文件为 tests/test_session.py，运行命令为 `python -m pytest tests/test_session.py -q`（在 login_demo 目录下执行）。覆盖范围：到期前会话有效、恰好到期与到期后无效（is_session_valid），以及续期 refresh_expiry 从当前时间延长 30 分钟（100 -&gt; 100+30*60）。</pre><h3>来源及摘要</h3><pre>tests/test_session.py  |  SHA-256 077122505f33bd14a79b5a1528bdb58dad350a9e4dfe7423a579473427e7ba47
+materials/testing-guide.md  |  SHA-256 5deb7ee1cff759eeaa33d9fd587b0ca6534d770a6d2280645e481b1d7a262bd3</pre></div></section></main></body></html>

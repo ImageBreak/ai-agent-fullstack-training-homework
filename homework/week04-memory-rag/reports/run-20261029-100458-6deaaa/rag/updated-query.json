@@ -1,0 +1,219 @@
+{
+  "question": "登录会话的有效期是多少分钟？",
+  "version": "6e1e6b06245281d9",
+  "vector": [
+    {
+      "id": "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3",
+      "source": "session-rules.md",
+      "title": "有效期长度",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 管理后台的登录会话有效期为 20 分钟。\n- 计时方式：从签发时刻开始计算，20 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。",
+      "score": 0.7388068026572848
+    },
+    {
+      "id": "21958c96a7860ab4ebe3dcf530bb2302cf9259f607e7a70e41ae5e7f7278cc0e",
+      "source": "testing-guide.md",
+      "title": "覆盖范围",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 到期前会话有效，恰好到期和到期后会话无效。\n- 续期会从当前时间向后延长 20 分钟。",
+      "score": 0.6467713355077628
+    },
+    {
+      "id": "c25be92f8efad566a76593481b738d060ef5a899306ad379704c726eec301bef",
+      "source": "payment-session.md",
+      "title": "有效期长度",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 支付会话有效期为 5 分钟。\n- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。",
+      "score": 0.6424048702265299
+    },
+    {
+      "id": "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02",
+      "source": "session-matrix.csv",
+      "title": "登录会话",
+      "version": "ed19a6eab97f53fb",
+      "text": "服务：login_demo，会话类型：登录会话，有效期：20 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组",
+      "score": 0.6320131264670019
+    },
+    {
+      "id": "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec",
+      "source": "payment-session.md",
+      "title": "与登录会话的区别",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 登录会话 20 分钟、可续期；支付会话 5 分钟、不可续期。\n- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。",
+      "score": 0.6265010683586468
+    }
+  ],
+  "bm25": [
+    {
+      "id": "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec",
+      "source": "payment-session.md",
+      "title": "与登录会话的区别",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 登录会话 20 分钟、可续期；支付会话 5 分钟、不可续期。\n- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。",
+      "score": 2.197401762008667
+    },
+    {
+      "id": "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02",
+      "source": "session-matrix.csv",
+      "title": "登录会话",
+      "version": "ed19a6eab97f53fb",
+      "text": "服务：login_demo，会话类型：登录会话，有效期：20 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组",
+      "score": 1.9782863855361938
+    },
+    {
+      "id": "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3",
+      "source": "session-rules.md",
+      "title": "有效期长度",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 管理后台的登录会话有效期为 20 分钟。\n- 计时方式：从签发时刻开始计算，20 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。",
+      "score": 1.9533812999725342
+    },
+    {
+      "id": "5acee52eb7461a40fbdcb397e883851346682edfaf1a6a27b6b26e81287ff527",
+      "source": "session-matrix.csv",
+      "title": "匿名浏览会话",
+      "version": "ed19a6eab97f53fb",
+      "text": "服务：login_demo，会话类型：匿名浏览会话，有效期：120 分钟，可续期：是，到期边界处理：到期后重新签发，负责人：认证组",
+      "score": 1.5777939558029175
+    },
+    {
+      "id": "6f3450e342293ff9d34987b17ab36e0a3afe026203dd801fb500317254aa3abe",
+      "source": "session-matrix.csv",
+      "title": "记住我令牌",
+      "version": "ed19a6eab97f53fb",
+      "text": "服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组",
+      "score": 1.5148171186447144
+    }
+  ],
+  "hybrid": [
+    {
+      "id": "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3",
+      "source": "session-rules.md",
+      "title": "有效期长度",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 管理后台的登录会话有效期为 20 分钟。\n- 计时方式：从签发时刻开始计算，20 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。",
+      "score": 0.032266458495966696
+    },
+    {
+      "id": "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec",
+      "source": "payment-session.md",
+      "title": "与登录会话的区别",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 登录会话 20 分钟、可续期；支付会话 5 分钟、不可续期。\n- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。",
+      "score": 0.03177805800756621
+    },
+    {
+      "id": "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02",
+      "source": "session-matrix.csv",
+      "title": "登录会话",
+      "version": "ed19a6eab97f53fb",
+      "text": "服务：login_demo，会话类型：登录会话，有效期：20 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组",
+      "score": 0.031754032258064516
+    },
+    {
+      "id": "c25be92f8efad566a76593481b738d060ef5a899306ad379704c726eec301bef",
+      "source": "payment-session.md",
+      "title": "有效期长度",
+      "version": "ed19a6eab97f53fb",
+      "text": "- 支付会话有效期为 5 分钟。\n- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。",
+      "score": 0.030798389007344232
+    },
+    {
+      "id": "6f3450e342293ff9d34987b17ab36e0a3afe026203dd801fb500317254aa3abe",
+      "source": "session-matrix.csv",
+      "title": "记住我令牌",
+      "version": "ed19a6eab97f53fb",
+      "text": "服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组",
+      "score": 0.030536130536130537
+    }
+  ],
+  "node_ids": [
+    "fb2ca596c50bbcc182b39d4db8f8d45802e64ac523594f809782b90c9f954fb0",
+    "745eee46db95f321aa5b4283ca29669b82b0194451c49fcc2d17243a17e97bf6",
+    "179e2d1c0dc055d22103ba6d18d585ec31e1992ee7ae5041321c1843d807731c",
+    "7a32feed4427822910a186bae3d5db8eb3b40e2beb271181334ceefda4c47ed9",
+    "032591745b38a543b517c807c906753b99bd05c7d3ca8ffd5193b573894b5adc",
+    "431a16825d312e1fa19e1fb1a07e8a53bc7df48077920d57241c387aa4926ea4",
+    "c25be92f8efad566a76593481b738d060ef5a899306ad379704c726eec301bef",
+    "e7f69e4f2a0c2546a440817a1e76a4f6e4558a5c2af8517257a93832de763891",
+    "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec",
+    "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02",
+    "7bcaa4cee5182caf83e66e908f201f2b66c8c5dab384e8edfa1ddd6aeaec123b",
+    "5acee52eb7461a40fbdcb397e883851346682edfaf1a6a27b6b26e81287ff527",
+    "6f3450e342293ff9d34987b17ab36e0a3afe026203dd801fb500317254aa3abe",
+    "4575bbcdfa2cdfba5ce7afeb0d57965e4a098f18fd54cde2b2d7cb43265b30d4",
+    "36df394bd3a52fcdd9d24faf3729012875619004c504d9311ca62fa4d2c630c7",
+    "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3",
+    "d195265d374acacdf26810410230418bf5a6fc60fcc8e38fd4f725ca8f1c5247",
+    "e7c9a1c3fec34aa1cfe0d4fb057907ebaec1d1b947c8dca3cd1ca89cf448ef73",
+    "f1ba9e254487a628fb67ab7728ce826999557f155e2f3289834a926f6f8a104d",
+    "21ab01311f7ee915cd938b1b55bf6463f632d3fd8b07bb48adb58600acd0cc5f",
+    "c48d30cd06c389d36fc01d15dce895358139f634b25451d7cee10c68cc6be6df",
+    "21958c96a7860ab4ebe3dcf530bb2302cf9259f607e7a70e41ae5e7f7278cc0e"
+  ],
+  "generation": {
+    "answer": "登录会话的有效期是 20 分钟 [E1][E2][E3]。",
+    "evidence": [
+      {
+        "id": "E1",
+        "source": "session-rules.md",
+        "title": "有效期长度",
+        "version": "ed19a6eab97f53fb",
+        "text": "- 管理后台的登录会话有效期为 20 分钟。\n- 计时方式：从签发时刻开始计算，20 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。",
+        "score": 0.032266458495966696,
+        "node_id": "f91b21fba8fe5d1fc41a1a8012ad73abcfca45b3bf87dbeba780c4b5710103e3"
+      },
+      {
+        "id": "E2",
+        "source": "payment-session.md",
+        "title": "与登录会话的区别",
+        "version": "ed19a6eab97f53fb",
+        "text": "- 登录会话 20 分钟、可续期；支付会话 5 分钟、不可续期。\n- 两者共用 `expires_at` 字段名，排查问题时先确认是哪个服务的会话。",
+        "score": 0.03177805800756621,
+        "node_id": "e4a492ecabdebe274a00441e53e84b9f2058314bdf10d2fbbdb0b6dab53c46ec"
+      },
+      {
+        "id": "E3",
+        "source": "session-matrix.csv",
+        "title": "登录会话",
+        "version": "ed19a6eab97f53fb",
+        "text": "服务：login_demo，会话类型：登录会话，有效期：20 分钟，可续期：是，到期边界处理：恰好到期视为无效，负责人：认证组",
+        "score": 0.031754032258064516,
+        "node_id": "8b3411fadaa3f50f5f6106905b6b6bedfe7b563742d847c6a0a643aa8741ae02"
+      },
+      {
+        "id": "E4",
+        "source": "payment-session.md",
+        "title": "有效期长度",
+        "version": "ed19a6eab97f53fb",
+        "text": "- 支付会话有效期为 5 分钟。\n- 超时后订单进入 `PAY_TIMEOUT` 状态，需要用户重新下单。",
+        "score": 0.030798389007344232,
+        "node_id": "c25be92f8efad566a76593481b738d060ef5a899306ad379704c726eec301bef"
+      },
+      {
+        "id": "E5",
+        "source": "session-matrix.csv",
+        "title": "记住我令牌",
+        "version": "ed19a6eab97f53fb",
+        "text": "服务：login_demo，会话类型：记住我令牌，有效期：30 天，可续期：是，到期边界处理：到期需重新登录，负责人：认证组",
+        "score": 0.030536130536130537,
+        "node_id": "6f3450e342293ff9d34987b17ab36e0a3afe026203dd801fb500317254aa3abe"
+      }
+    ],
+    "model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 19,
+      "prompt_tokens": 753,
+      "total_tokens": 772,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 753
+    },
+    "citation_ids_valid": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "changed_files": [
+    "session-rules.md",
+    "faq.md",
+    "testing-guide.md",
+    "payment-session.md",
+    "session-matrix.csv"
+  ],
+  "old_version": "4ad021ebdec3e7a2",
+  "new_version": "6e1e6b06245281d9",
+  "removed_node_count": 6,
+  "removed_node_ids": [
+    "08e241540097760b9212f01272dc243e7fe1372f7a3a1de3cfa736b13be60750",
+    "0e082a949b679888b060373a59b767777f6fd9d632815ad1f7e69efe55ac7b5e",
+    "31e618c950e8c7d1efca209e4fd1f7c7eb4efade004ecd3954353f19cf21583e",
+    "34b73565fbfc17272ccf0fa083da6361d238f44c05de0d237b77a7d3871a0bf9",
+    "89b6d145d5cb5f242a624066830f3364764ddd7348cdb022ac2d3eb2e69ac623",
+    "ea874fd5fa0546312e36d2b74cadcc8957f5f5d50874c49951ba3c686183b1ed"
+  ],
+  "current_node_count": 22
+}

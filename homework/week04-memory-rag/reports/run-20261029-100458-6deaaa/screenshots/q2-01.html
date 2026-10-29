@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
+    *{box-sizing:border-box} body{margin:0;background:#edf1f5;color:#172332;font:18px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;line-height:1.55}
+    main{width:1380px;margin:0 auto;padding:40px} header{background:#12314b;color:white;padding:30px;border-radius:18px;margin-bottom:24px}
+    h1{font-size:32px;margin:0 0 6px} header p{margin:0;color:#c4d8e6} section{background:white;border:1px solid #d7e1e8;border-radius:14px;padding:22px 26px;margin-bottom:16px}
+    h2{font-size:21px;margin:0 0 12px;color:#13577b} pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;font:16px/1.5 ui-monospace,Menlo,monospace}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px} .rank{background:#f5f8fa;padding:12px;margin:8px 0;border-radius:8px} small{color:#496b7c}
+    </style></head><body><main><header><h1>第二题 · 构建向量与关键词索引</h1><p>LlamaIndex 同一批节点 + 本地真实 BGE Embedding</p></header><section><h2>建库结果与分块样例</h2><div><pre>{
+  &quot;version&quot;: &quot;4ad021ebdec3e7a2&quot;,
+  &quot;node_count&quot;: 22,
+  &quot;dimension&quot;: 512,
+  &quot;model&quot;: &quot;BAAI/bge-small-zh-v1.5&quot;,
+  &quot;sample&quot;: {
+    &quot;id&quot;: &quot;34b73565fbfc17272ccf0fa083da6361d238f44c05de0d237b77a7d3871a0bf9&quot;,
+    &quot;source&quot;: &quot;session-rules.md&quot;,
+    &quot;title&quot;: &quot;有效期长度&quot;,
+    &quot;version&quot;: &quot;683b10442be31071&quot;,
+    &quot;text&quot;: &quot;- 管理后台的登录会话有效期为 30 分钟。\n- 计时方式：从签发时刻开始计算，30 分钟后到期。\n- 空闲会话不自动续期，必须由用户请求触发刷新。&quot;,
+    &quot;score&quot;: null
+  },
+  &quot;index_path&quot;: &quot;/Users/perry/Documents/code/ai-agent-fullstack-training-homework/homework/week04-memory-rag/reports/run-20261029-100458-6deaaa/rag/index/generations/4ad021ebdec3e7a2&quot;
+}</pre></div></section></main></body></html>
